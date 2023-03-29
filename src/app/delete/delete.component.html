@@ -1,0 +1,25 @@
+<div class="border">
+    <div class="containerData">
+      <h4 class="title">PersonEditComponent (/edit)</h4>
+      
+      <h3>ARE YOU SURE YOU WANT TO DELETE?</h3>
+
+      <div *ngIf="persons">
+        <!-- pengecekan kalau memang ada isinya butuh soalnya gaada inisialisasi dulu persons nya,
+                                           kayaknya 'if a:' kayak 'if a == True' di python -->
+        <div class="data">name: {{persons.name}}</div>
+        <div class="data">email: {{persons.email}}</div>
+        <div class="data">company: {{persons.company}}</div>
+        <div class="data">region: {{persons.region}}</div>
+        <div class="data">country: {{persons.country}}</div>
+        
+        
+        <button type="button" (click)="onYes(persons)">yes</button>
+        <button type="button" (click)="goBack()">no</button>
+      
+  
+
+      </div>
+    </div>
+  </div>
+  

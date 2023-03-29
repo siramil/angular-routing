@@ -1,0 +1,36 @@
+<div class="border">
+  <div class="containerData">
+    <h4 class="title">PersonEditComponent (/edit)</h4>
+    <h3>EDIT PERSON</h3>
+
+    <div *ngIf="persons">
+      <!-- pengecekan kalau memang ada isinya butuh soalnya gaada inisialisasi dulu persons nya,
+                                         kayaknya 'if a:' kayak 'if a == True' di python -->
+      <div class="data">name: <input [(ngModel)]="persons.name"/></div>
+      <div class="data">email: <input [(ngModel)]="persons.email"/></div>
+      <div class="data">company:<input [(ngModel)]="persons.company"/></div>
+      <div class="data">region: <input [(ngModel)]="persons.region"/></div>
+      <div class="data">country: <input [(ngModel)]="persons.country"/></div>
+      
+      <button type="button" (click)="goBack()">cancel</button>
+      <button type="button" (click)="save()">save</button>
+
+      <!--
+
+      <a routerLink="/person/{{ persons.id }}">
+        <button type="button" (click)="onClick(persons)"><span>edit</span></button>
+      </a>
+
+      <a routerLink="/delete/{{ persons.id }}">
+        <button type="button" (click)="onClick(persons)">
+          <span>delete</span>
+        </button>
+      </a> -->
+      <!--
+        <div>
+        <label for="hero-name">Hero name: </label>
+        <input id="hero-name" [(ngModel)]="persons.name" placeholder="name">
+        </div>-->
+    </div>
+  </div>
+</div>
